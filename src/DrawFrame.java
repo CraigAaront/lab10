@@ -18,10 +18,12 @@ public class DrawFrame extends JFrame
         Shape rect2 = new Rectangle(new Point(0,300) , 300,150, Color.BLUE, true);
         Shape tri1 = new IsoscelesTriangle(new Point(100,220), 70, -100, Color.BLACK, true);
         Shape circ1 = new Circle(new Point(100, 75), 75, Color.BLACK, true);
-        Shape oval1 = new Oval(new Point(110, 100), 15, 7, Color.WHITE, true);
-        Shape oval2 = new Oval(new Point(140, 100), 15, 7, Color.WHITE, true);
+        Shape oval1 = new Oval(new Point(110, 110), 15, 7, Color.WHITE, true);
+        Shape oval2 = new Oval(new Point(140, 110), 15, 7, Color.WHITE, true);
         Shape oval3 = new Oval(new Point(112, 125), 45, 20, Color.YELLOW, true);
         Shape tri2 = new IsoscelesTriangle(new Point(110,125), 50, 10, Color.BLACK, true);
+        Shape tri3 = new RightTriangle(new Point(130, 85), -10, -30,Color.BLACK, true); 
+        Shape tri4 = new RightTriangle(new Point(160, 85), -12, -30,Color.BLACK, true); 
 
 
         drawPanel.addShape(rect1);
@@ -32,6 +34,9 @@ public class DrawFrame extends JFrame
         drawPanel.addShape(oval2);
         drawPanel.addShape(oval3);
         drawPanel.addShape(tri2);
+        drawPanel.addShape(tri3);
+        drawPanel.addShape(tri4);
+
 
         
         frame.add(drawPanel);
