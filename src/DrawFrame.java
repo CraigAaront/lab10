@@ -24,6 +24,11 @@ public class DrawFrame extends JFrame
         Shape tri2 = new IsoscelesTriangle(new Point(110,125), 50, 10, Color.BLACK, true);
         Shape tri3 = new RightTriangle(new Point(130, 85), -10, -30,Color.BLACK, true); 
         Shape tri4 = new RightTriangle(new Point(160, 85), -12, -30,Color.BLACK, true); 
+        Shape circ2 = new Circle(new Point(215, -10), 100, Color.WHITE, true);
+        Shape circ3 = new Circle(new Point(220, -5), 90, Color.GRAY, false);
+        Shape tri5 = new IsoscelesTriangle(new Point(270, 35), -20, 20, Color.BLACK, true); 
+        Shape dia1 = new Diamond(new Point(235, 40), 15, Color.BLACK, true);
+        Shape dia2 = new Diamond(new Point(265, 40), 15, Color.BLACK, true);
 
 
         drawPanel.addShape(rect1);
@@ -36,6 +41,13 @@ public class DrawFrame extends JFrame
         drawPanel.addShape(tri2);
         drawPanel.addShape(tri3);
         drawPanel.addShape(tri4);
+        drawPanel.addShape(circ2);
+        drawPanel.addShape(circ3);
+        drawPanel.addShape(tri5);
+        drawPanel.addShape(dia1);
+        drawPanel.addShape(dia2);
+
+
 
 
         
