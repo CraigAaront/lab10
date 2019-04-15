@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 
@@ -58,20 +59,15 @@ public class DrawFrame extends JFrame
 
         Sinusoid sin = new Sinusoid(Color.GREEN, new Point(1,230), 4, 10, 7);
         drawPanel.addShape(sin);
-
-
-
-
         
         frame.add(drawPanel);
         frame.setVisible(true);
-
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         DrawFrame frame = new DrawFrame("Lab10");
+        PanelToImage.makePanelPNGImage(drawPanel, "lab10Image");
 
-        
     }
 }
