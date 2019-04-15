@@ -15,7 +15,7 @@ public abstract class Shape implements Drawable
     public Color getColor() {
         return this.color;
     }
-    public Boolean isFilled() {
+    public boolean isFilled() {
         return this.filled;
     }
     public Point[] getLocation() {

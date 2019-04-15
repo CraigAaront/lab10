@@ -19,6 +19,7 @@ public class Polygon extends Shape implements Drawable
             xPoint[numPoints] = (int)point.getX();
             yPoint[numPoints] = (int)point.getY();
         }
+        graphics.setColor(this.getColor());
         if (this.isFilled() == true) {
             graphics.fillPolygon(xPoint, yPoint, numPoints);
         }
