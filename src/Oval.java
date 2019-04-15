@@ -11,12 +11,25 @@ public class Oval extends Shape
         super(color, filled);
         this.diameter1 = diameter1;
         this.diameter2 = diameter2;
+        location[0] = pointUL;
+        location[1] = new Point(pointUL.x, pointUL.y - diameter2);
+        location[2] = new Point(pointUL.x + diameter1, pointUL.y - diameter2);
+        location[3] = new Point(pointUL.x + diameter1, pointUL.y);
     }
 
     @Override
     public void draw(Graphics graphics)
     {
-        // TODO Auto-generated method stub
+        int x = location[0].x;
+        int y = location[0].y;
+        int width = this.diameter1;
+        int height = this.diameter2;
+        if (this.isFilled() == true) {
+            graphics.fillOval(x, y, width, height);
+        }
+        else {
+            graphics.drawOval(x, y, width, height);
+        }
         
     }
     public int getDiameter1() {
