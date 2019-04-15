@@ -22,7 +22,9 @@ public class Oval extends Shape
         int y = location[0].y;
         int width = this.diameter1;
         int height = this.diameter2;
+        
         graphics.setColor(this.getColor());
+        
         if (this.isFilled() == true) {
             graphics.fillOval(x, y, width, height);
         }

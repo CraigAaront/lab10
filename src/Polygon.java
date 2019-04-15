@@ -14,12 +14,17 @@ public class Polygon extends Shape implements Drawable
     {
         int[] xPoint = new int[this.location.length];
         int[] yPoint = new int[this.location.length];
+        
         int numPoints = location.length;
-        for(Point point : getLocation()) {
-            xPoint[numPoints] = (int)point.getX();
-            yPoint[numPoints] = (int)point.getY();
+        
+
+        for(int i =0; i < location.length; i++) {
+            xPoint[i] = location[i].x;
+            yPoint[i] = location[i].y;
         }
+        
         graphics.setColor(this.getColor());
+        
         if (this.isFilled() == true) {
             graphics.fillPolygon(xPoint, yPoint, numPoints);
         }

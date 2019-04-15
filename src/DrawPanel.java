@@ -13,6 +13,8 @@ public class DrawPanel extends JPanel
         shapeList.add(shape);
     }
     protected void paintComponent(Graphics graphics) {
-
+        for (int i = 0; i <shapeList.size(); i++) {
+            shapeList.get(i).draw(graphics);
+        }
     }
 }
