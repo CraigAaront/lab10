@@ -50,14 +50,14 @@ public class DrawFrame extends JFrame
         drawPanel.addShape(circ3);
         drawPanel.addShape(dia3);
         drawPanel.addShape(dia4);
-
         drawPanel.addShape(tri5);
         drawPanel.addShape(dia1);
         drawPanel.addShape(dia2);
         drawPanel.addShape(tri6);
         drawPanel.addShape(tri7);
 
-
+        Sinusoid sin = new Sinusoid(Color.GREEN, new Point(1,230), 4, 10, 7);
+        drawPanel.addShape(sin);
 
 
 
@@ -70,7 +70,7 @@ public class DrawFrame extends JFrame
     
     public static void main(String[] args) {
 
-        DrawFrame frame = new DrawFrame("shit");
+        DrawFrame frame = new DrawFrame("Lab10");
 
         
     }
