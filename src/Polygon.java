@@ -17,7 +17,6 @@ public class Polygon extends Shape implements Drawable
         
         int numPoints = location.length;
         
-
         for(int i =0; i < location.length; i++) {
             xPoint[i] = location[i].x;
             yPoint[i] = location[i].y;
