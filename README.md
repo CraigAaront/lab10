@@ -1,2 +1,2 @@
 # Lab10 - Old School Batman 
-![]lab10Image.png
+![](lab10Image.png)
