@@ -54,14 +54,14 @@ public class Oval extends Shape
         
     }
     /**
-     * 
+     * returns diameter1/width of oval
      * @returns width of oval
      */
     public int getDiameter1() {
         return this.diameter1;
     }
     /**
-     * 
+     * returns diameter2/height of oval
      * @returns height of oval
      */
     public int getDiameter2() {
