@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>PolyLine.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Merged (Apr 16, 2019 1:54:16 PM)</a> &gt; <a href="../../index.html" class="el_group">lab10</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">PolyLine.java</span></div><h1>PolyLine.java</h1><pre class="source lang-java linenums">import java.awt.Color;
+import java.awt.Point;
+/**
+ * Polyline class that extends polygon
+ * @author Aaron
+ *
+ */
+public class PolyLine extends Polygon
+{
+    /**
+     * The &quot;upper-left&quot; (UL) point. 1: The &quot;upper-right&quot; (UR) point. 2: The &quot;lower-right&quot; point. 
+     * This has the same x value as the upper-right but has a y value such that: lr.y = ur.y + thickness. 
+     * 3: The &quot;lower-left&quot; point. This has the same x value as the upper-left but has a y value such that:
+     * ll.y = ul.y + thickness.
+     * @param pointUL: upper left point
+     * @param pointUR: upper right point
+     * @param thickness: thickness between lines
+     * @param color: shape color
+     * @param filled: true if filled
+     */
+    PolyLine(Point pointUL, Point pointUR, int thickness,Color color, boolean filled)    {
+<span class="fc" id="L22">        super(color, filled);</span>
+<span class="fc" id="L23">        location = new Point[4];</span>
+<span class="fc" id="L24">        location[0] = pointUL;</span>
+<span class="fc" id="L25">        location[1] = pointUR;</span>
+<span class="fc" id="L26">        location[2] = new Point(pointUR.x, pointUR.y + thickness);</span>
+<span class="fc" id="L27">        location[3] = new Point(pointUL.x, pointUL.y + thickness);</span>
+<span class="fc" id="L28">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>Merged (Apr 16, 2019 1:54:16 PM)</div></body></html>

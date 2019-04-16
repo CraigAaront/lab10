@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Polygon.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Merged (Apr 16, 2019 1:54:16 PM)</a> &gt; <a href="../../index.html" class="el_group">lab10</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Polygon.java</span></div><h1>Polygon.java</h1><pre class="source lang-java linenums">import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Point;
+
+/**
+ * abstract polygon class; extends shape and implements drawable
+ * @author Aaron
+ *
+ */
+public abstract class Polygon extends Shape implements Drawable
+{
+    /**
+     * constructor for polygin
+     * @param color: color of object
+     * @param filled: true if object is filled
+     */
+    public Polygon(Color color, boolean filled)
+    {
+<span class="fc" id="L19">        super(color, filled);</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     * draw method for polygon, breaks the points into x and y components and uses the graphics
+     * draw function to create a polygon
+     */
+    @Override
+    public void draw(Graphics graphics)
+    {
+<span class="nc" id="L29">        int[] xPoint = new int[this.location.length];</span>
+<span class="nc" id="L30">        int[] yPoint = new int[this.location.length];</span>
+        
+<span class="nc" id="L32">        int numPoints = location.length;</span>
+        
+<span class="nc bnc" id="L34" title="All 2 branches missed.">        for(int i =0; i &lt; location.length; i++) {</span>
+<span class="nc" id="L35">            xPoint[i] = location[i].x;</span>
+<span class="nc" id="L36">            yPoint[i] = location[i].y;</span>
+        }
+        
+<span class="nc" id="L39">        graphics.setColor(this.getColor());</span>
+        
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        if (this.isFilled() == true) {</span>
+<span class="nc" id="L42">            graphics.fillPolygon(xPoint, yPoint, numPoints);</span>
+<span class="nc" id="L43">        }</span>
+        else {
+<span class="nc" id="L45">            graphics.drawPolygon(xPoint, yPoint, numPoints);</span>
+        }
+       
+<span class="nc" id="L48">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>Merged (Apr 16, 2019 1:54:16 PM)</div></body></html>
