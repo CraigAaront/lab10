@@ -1,6 +1,9 @@
 import java.awt.Graphics;
 import java.util.ArrayList;
 import javax.swing.JPanel;
+import java.awt.Component;
+
+
 
 public class DrawPanel extends JPanel
 {
