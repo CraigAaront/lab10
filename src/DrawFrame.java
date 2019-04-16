@@ -72,6 +72,8 @@ public class DrawFrame extends JFrame
         Shape dia6 = new Diamond(new Point(137, 168), 10, Color.BLACK, true);
         drawPanel.addShape(dia5);
         drawPanel.addShape(dia6);
+        Shape damn = new PolyLine(new Point(145,150), new Point (180,170), 10 ,Color.BLACK, true);    
+        drawPanel.addShape(damn);
 
 
 
