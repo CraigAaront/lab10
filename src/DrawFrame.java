@@ -4,11 +4,18 @@ import java.awt.Point;
 import java.io.IOException;
 
 import javax.swing.JFrame;
-
+/**
+ * Draws a picture of BATMAN
+ * @author Aaron
+ *
+ */
 public class DrawFrame extends JFrame
 {
     private static DrawPanel drawPanel;
-    
+    /**
+     * Constructor for batman image
+     * @param title: title of the image
+     */
     public DrawFrame(String title) {
         JFrame frame = new JFrame(title);
         frame.setSize(new Dimension(300,300));

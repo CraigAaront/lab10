@@ -6,6 +6,9 @@ import org.junit.Assert;
 
 public class TestClass
 {
+    /**
+     * tests the square/rectangle classes
+     */
     @Test
     public void testSquare() {
         Square square = new Square(new Point(0,0), 10, Color.RED, true);
@@ -18,7 +21,9 @@ public class TestClass
         points[3] = new Point(10,0);
         Assert.assertEquals("wrong points", points, square.getLocation());
     }
-    
+    /**
+     * tests the triangle classes
+     */
     @Test
     public void testTriangle() {
         Shape tri1 = new IsoscelesTriangle(new Point(0,0), 20, 20, Color.BLACK, true);
