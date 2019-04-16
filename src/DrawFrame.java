@@ -22,8 +22,8 @@ public class DrawFrame extends JFrame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         drawPanel = new DrawPanel();
-        Shape rect1 = new Rectangle(new Point(0,150) , 300,200, Color.GRAY, true);
-        Shape rect2 = new Rectangle(new Point(0,300) , 300,150, Color.BLUE, true);
+        Shape rect1 = new Rectangle(new Point(0,150) , 300,200, Color.BLUE, true);
+        Shape rect2 = new Rectangle(new Point(0,300) , 300,150, Color.LIGHT_GRAY, true);
         Shape tri1 = new IsoscelesTriangle(new Point(100,220), 70, -100, Color.GRAY, true);
         Shape circ1 = new Circle(new Point(100, 75), 75, Color.BLACK, true);
         Shape oval1 = new Oval(new Point(110, 110), 15, 7, Color.WHITE, true);
@@ -41,9 +41,6 @@ public class DrawFrame extends JFrame
         Shape tri7 = new IsoscelesTriangle(new Point(267, 35), -5, -15, Color.BLACK, true); 
         Shape dia3 = new Diamond(new Point(230, 40), 20, Color.GRAY, false);
         Shape dia4 = new Diamond(new Point(260, 40), 20, Color.GRAY, false);
-
-
-
         drawPanel.addShape(rect1);
         drawPanel.addShape(rect2);
         drawPanel.addShape(tri1);
@@ -63,8 +60,7 @@ public class DrawFrame extends JFrame
         drawPanel.addShape(dia2);
         drawPanel.addShape(tri6);
         drawPanel.addShape(tri7);
-
-        Sinusoid sin = new Sinusoid(Color.GREEN, new Point(1,230), 4, 10, 7);
+        Sinusoid sin = new Sinusoid(Color.DARK_GRAY, new Point(1,230), 4, 10, 7);
         drawPanel.addShape(sin);
         Shape rect3 = new Rectangle(new Point(110, 200) , 50,10, Color.YELLOW, true);
         drawPanel.addShape(rect3);
