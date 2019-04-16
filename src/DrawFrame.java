@@ -17,7 +17,7 @@ public class DrawFrame extends JFrame
         drawPanel = new DrawPanel();
         Shape rect1 = new Rectangle(new Point(0,150) , 300,200, Color.GRAY, true);
         Shape rect2 = new Rectangle(new Point(0,300) , 300,150, Color.BLUE, true);
-        Shape tri1 = new IsoscelesTriangle(new Point(100,220), 70, -100, Color.BLACK, true);
+        Shape tri1 = new IsoscelesTriangle(new Point(100,220), 70, -100, Color.GRAY, true);
         Shape circ1 = new Circle(new Point(100, 75), 75, Color.BLACK, true);
         Shape oval1 = new Oval(new Point(110, 110), 15, 7, Color.WHITE, true);
         Shape oval2 = new Oval(new Point(140, 110), 15, 7, Color.WHITE, true);
@@ -59,6 +59,19 @@ public class DrawFrame extends JFrame
 
         Sinusoid sin = new Sinusoid(Color.GREEN, new Point(1,230), 4, 10, 7);
         drawPanel.addShape(sin);
+        Shape rect3 = new Rectangle(new Point(110, 200) , 50,10, Color.YELLOW, true);
+        drawPanel.addShape(rect3);
+        Shape sqr1 = new Square(new Point(130, 200), 10, Color.BLACK, false);
+        drawPanel.addShape(sqr1);
+        Shape tri8 = new IsoscelesTriangle(new Point(130,165), 13, 13, Color.BLACK, true);
+        drawPanel.addShape(tri8);
+        Shape dia5 = new Diamond(new Point(120, 168), 10, Color.BLACK, true);
+        Shape dia6 = new Diamond(new Point(137, 168), 10, Color.BLACK, true);
+        drawPanel.addShape(dia5);
+        drawPanel.addShape(dia6);
+
+
+
         
         frame.add(drawPanel);
         frame.setVisible(true);
@@ -67,7 +80,7 @@ public class DrawFrame extends JFrame
     public static void main(String[] args) throws IOException {
 
         DrawFrame frame = new DrawFrame("Lab10");
-        PanelToImage.makePanelPNGImage(drawPanel, "lab10Image");
+        PanelToImage.makePanelPNGImage(drawPanel, "lab10Image.png");
 
     }
 }
